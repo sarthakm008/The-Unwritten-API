@@ -1,0 +1,11 @@
+const express = require('express');
+const controller = require('../controllers/gameController');
+const router = express.Router();
+router.post('/start', controller.start);
+router.post('/continue', controller.continueIntro);
+router.post('/choice', controller.choice);
+router.post('/talk', controller.talk);
+router.post('/forgotten', controller.forgotten);
+router.post('/ending', controller.ending);
+router.get('/:sessionId', controller.getGame);
+module.exports = router;
